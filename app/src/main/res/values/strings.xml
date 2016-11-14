@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="btn_hello">Hello</string>
+    <string name="msg">Hey</string>
+    <string name="notif">My notif</string>
+    <string name="Services">Services</string>
+
 </resources>
