@@ -30,7 +30,20 @@
         android:layout_below="@+id/textView2"
         android:gravity="center"
         android:onClick="createServices"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="15dp"
+        android:textColor="#FF334D5C"/>
+
+    <Button
+        android:text="@string/btn_openbrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/button3"
+        android:onClick="findMoreBeer"
+        android:textColor="#FF334D5C"/>
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
@@ -42,18 +55,6 @@
         android:layout_marginTop="15dp"
         android:id="@+id/rv_beer"
         android:layout_alignParentBottom="true" />
-
-    <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button2"
-        android:layout_toRightOf="@+id/button2"
-        android:layout_toEndOf="@+id/button2"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:id="@+id/button3"
-        android:onClick="findMoreBeer"/>
 
 
 </RelativeLayout>
