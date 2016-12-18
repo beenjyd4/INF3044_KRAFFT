@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
@@ -11,7 +12,7 @@
     tools:context="com.example.benjamin.myapplication.Main2Activity">
 
     <TextView
-        android:text="PAGE 2"
+        android:text="@string/msg2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
@@ -22,11 +23,37 @@
         android:gravity="center"/>
 
     <Button
-        android:text="@string/Services"
+        android:text="@string/services"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button2"
         android:layout_below="@+id/textView2"
         android:gravity="center"
-        android:onClick="createServices"/>
+        android:onClick="createServices"
+        android:layout_marginTop="15dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/rv_beer"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/button2"
+        android:layout_toEndOf="@+id/button2"
+        android:layout_marginLeft="52dp"
+        android:layout_marginStart="52dp"
+        android:id="@+id/button3"
+        android:onClick="findMoreBeer"/>
+
+
 </RelativeLayout>

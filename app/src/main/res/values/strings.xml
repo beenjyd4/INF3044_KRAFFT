@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="btn_hello">Hello</string>
-    <string name="msg">Hey</string>
+    <string name="app_name">Beer Name Researcher</string>
+    <string name="btn_welcome">Click-me!</string>
+    <string name="msg">Welcome,by cliking on the next button you will have a Beer List.</string>
+    <string name="msg2">Clicked on the next button to get the Beer List</string>
     <string name="notif">My notif</string>
-    <string name="Services">Services</string>
+    <string name="services">Download</string>
+    <string name="filesDown">Successful Files Downloaded</string>
 
 </resources>

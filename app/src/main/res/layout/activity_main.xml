@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Coucou !"
+        android:text="@string/msg"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
         />
 
     <Button
-        android:text="@string/btn_hello"
+        android:text="@string/btn_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button"

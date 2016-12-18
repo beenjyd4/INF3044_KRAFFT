@@ -3,6 +3,7 @@ package com.example.benjamin.myapplication;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.Context;
+import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import java.io.File;
@@ -14,27 +15,19 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * An {@link IntentService} subclass for handling asynchronous task requests in
- * a service on a separate handler thread.
- * <p>
- * TODO: Customize class - update intent actions, extra parameters and static
- * helper methods.
- */
+
 public class GetBiersServices extends IntentService {
     // TODO: Rename actions, choose action names that describe tasks that this
     // IntentService can perform, e.g. ACTION_FETCH_NEW_ITEMS
     private static final String ACTION_GET_ALL_BIERS = "com.example.benjamin.myapplication.action.get.all.biers";
+    public static final String TAG="BIERS_UPDATE_SERVICES";
+    public static final String TAGMSG="bieres.json downloaded !";
+
     public GetBiersServices() {
         super("GetBiersServices");
     }
 
-    /**
-     * Starts this service to perform action Foo with the given parameters. If
-     * the service is already performing a task this action will be queued.
-     *
-     * @see IntentService
-     */
+
     // TODO: Customize helper method
     public static void startActionGetAllBiers(Context context) {
         Intent intent = new Intent(context, GetBiersServices.class);
@@ -52,12 +45,8 @@ public class GetBiersServices extends IntentService {
             }
         }
     }
-    /**
-     * Handle action Foo in the provided background thread with the provided
-     * parameters.
-     */
-    private void handleActionGetAllBiers() { // NE FAIT RIEN !!
-        Log.d("MyBiers", "Ok!");
+
+    private void handleActionGetAllBiers() {
         try{
             URL url = new URL ("http://binouze.fabrigli.fr/bieres.json");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -65,7 +54,8 @@ public class GetBiersServices extends IntentService {
             con.connect();
             if(HttpURLConnection.HTTP_OK == con.getResponseCode()){
                 copyInputStreamToFile(con.getInputStream(),new File(getCacheDir(),"bieres.json"));
-                Log.d("TAG", "bieres json downloaded !");
+                Log.d(TAG, TAGMSG);
+                LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(Main2Activity.BIERS_UPDATE));
             }
         }catch(MalformedURLException e){
             e.printStackTrace();
