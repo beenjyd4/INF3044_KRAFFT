@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+             android:id="@+id/action_settings"
+             android:title="@string/research"
+             app:showAsAction="never"
+             android:onClick="prankToast"/>
+        <item
+             android:id="@+id/icon"
+             android:title="CreditsButton"
+             app:showAsAction="ifRoom"
+             android:icon="@drawable/beericon"
+             android:onClick="createCredits"/>
+
+
+
+
+</menu>

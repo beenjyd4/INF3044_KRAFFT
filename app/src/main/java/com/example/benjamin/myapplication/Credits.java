@@ -10,30 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * Created by Benjamin on 18/12/2016.
+ */
+
+public class Credits extends AppCompatActivity {
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.credits);
 
     }
-    public void createInit(View v){
-        Intent i = new Intent(this, Main2Activity.class);
-        startActivity(i);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
     public void createCredits(MenuItem item) {
-        Intent i = new Intent(this, Credits.class);
-        startActivity(i);
+       finish();
     }
-
-
     public void prankToast(MenuItem item) {
 
         LayoutInflater inflater = getLayoutInflater();
@@ -44,4 +34,12 @@ public class MainActivity extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
 }

@@ -1,12 +1,14 @@
 <resources>
-    <string name="app_name">Beer Name Researcher</string>
+    <string name="app_name">What beer?</string>
+    <string name="full_app_name">What beer should I drink?</string>
     <string name="btn_welcome">Click-me!</string>
     <string name="btn_openbrow">More Beer</string>
-    <string name="msg">Welcome,by cliking on the next button you will have a Beer List.</string>
+    <string name="msg">Welcome, by cliking on the next button you will have a Beer List.</string>
     <string name="msg2">Clicked on the next button to get the Beer List</string>
     <string name="notif">My notif</string>
     <string name="services">Download</string>
     <string name="filesDown">Successful Files Downloaded</string>
     <string name="url">https://en.wikipedia.org/wiki/Category:Beer_brands</string>
+    <string name="research">Research</string>
 
 </resources>

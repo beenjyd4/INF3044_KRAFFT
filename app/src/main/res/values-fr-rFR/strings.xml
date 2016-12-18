@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Renifleur de bière</string>
+    <string name="app_name">Quelle bière?</string>
+    <string name="full_app_name">Quelle bière je devrais boire?</string>
     <string name="btn_welcome">Cliquez-moi!</string>
     <string name="btn_openbrow">Plus de bière</string>
-    <string name="msg">Bienvenue, en cliquant sur le button ci-dessous vous accèderez a une Liste de Bière.</string>
+    <string name="msg">Bienvenue, en cliquant sur le button ci-dessous vous accèderez à une Liste de Bière.</string>
     <string name="msg2">Cliquez sur le button ci-dessous pour obtenir la liste de Bière</string>
     <string name="notif">Ma notification</string>
     <string name="services">Télécharger</string>
     <string name="filesDown">Fichier Téléchargé avec succès.</string>
     <string name="url">https://fr.wikipedia.org/wiki/Liste_des_marques_de_bières</string>
+    <string name="research">Rechercher</string>
 </resources>
