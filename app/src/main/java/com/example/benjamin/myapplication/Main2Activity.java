@@ -44,7 +44,6 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Button btn_svc = (Button) findViewById(R.id.button2);
         rv = (RecyclerView) findViewById(R.id.rv_beer);
         rv.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         rv.setAdapter(new BeersAdapter(getBeersFromFiles()));
