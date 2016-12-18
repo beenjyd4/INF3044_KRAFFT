@@ -31,11 +31,10 @@ import java.io.InputStream;
 public class Main2Activity extends AppCompatActivity {
     private static final int NOTIF_ID=0;
     public RecyclerView rv;
-    public static String URL=""
 
 
     public void findMoreBeer(View v){
-        String url = URL;
+        String url = getResources().getString(R.string.url);
         Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
         startActivity(intent);
     }

@@ -7,4 +7,5 @@
     <string name="notif">Ma notification</string>
     <string name="services">Télécharger</string>
     <string name="filesDown">Fichier Téléchargé avec succès.</string>
+    <string name="url">https://fr.wikipedia.org/wiki/Liste_des_marques_de_bières</string>
 </resources>

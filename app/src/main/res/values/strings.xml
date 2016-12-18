@@ -6,5 +6,6 @@
     <string name="notif">My notif</string>
     <string name="services">Download</string>
     <string name="filesDown">Successful Files Downloaded</string>
+    <string name="url">https://en.wikipedia.org/wiki/Category:Beer_brands</string>
 
 </resources>
