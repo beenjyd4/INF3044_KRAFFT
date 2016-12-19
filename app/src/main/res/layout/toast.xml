@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/toast">
+    android:id="@+id/toast"
+    android:background="#FFFFFF" >
+
+
+    <TextView
+        android:text="@string/toast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/textView4"
+        android:textSize="36sp"
+        android:textColor="#FF334D5C"
+        android:background="#FFFFFF" />
 
     <ImageView
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:src="@drawable/wrongway1"
-        android:layout_below="@+id/textView1"
-        android:id="@+id/imageView1">
+        android:src="@drawable/toastnoah"
+        android:id="@+id/imageView1"
+        android:layout_alignBottom="@id/textView4"
+        android:background="#FFFFFF">
     </ImageView>
 
-</LinearLayout>
+</RelativeLayout>

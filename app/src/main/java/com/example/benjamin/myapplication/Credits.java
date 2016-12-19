@@ -24,6 +24,15 @@ public class Credits extends AppCompatActivity {
     public void createCredits(MenuItem item) {
        finish();
     }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
     public void prankToast(MenuItem item) {
 
         LayoutInflater inflater = getLayoutInflater();
@@ -34,12 +43,4 @@ public class Credits extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
 }

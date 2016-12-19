@@ -9,6 +9,17 @@
     <string name="services">Download</string>
     <string name="filesDown">Successful Files Downloaded</string>
     <string name="url">https://en.wikipedia.org/wiki/Category:Beer_brands</string>
-    <string name="research">Research</string>
+    <string name="research">Toast</string>
+    <string name="credits">Authors:\n
+                            Benjamin Krafft\n
+                            Jessica Favin\n\n
+
+                            Professor:\n
+                            Pierre-Emmanuel Fabrigli\n\n
+
+                            This project was coded for the mobile programming course in 1st year of engineering cycle at ESIEA.\n\n
+
+                            2016-2017</string>
+    <string name="toast">This is a Toast !</string>
 
 </resources>

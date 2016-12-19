@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.BitmapFactory;
-import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -56,21 +55,6 @@ public class Main2Activity extends AppCompatActivity {
         Intent intent = new Intent( Intent.ACTION_VIEW, Uri.parse( url ) );
         startActivity(intent);
     }
-
-
-    public void createServices(View v){
-
-        GetBiersServices.startActionGetAllBiers(this);
-        IntentFilter intentFilter = new IntentFilter(BIERS_UPDATE);
-        LocalBroadcastManager.getInstance(this).registerReceiver(new BierUpdate(),intentFilter);
-    }
-    public static final String BIERS_UPDATE="com.project-tp1.info3034-11.BIERS_UPDATE";
-    public static final String TAG="BIERS_UPDATE";
-
-    public void createCredits(MenuItem item) {
-        Intent i = new Intent(this, Credits.class);
-        startActivity(i);
-    }
     public void prankToast(MenuItem item) {
 
         LayoutInflater inflater = getLayoutInflater();
@@ -81,6 +65,22 @@ public class Main2Activity extends AppCompatActivity {
         toast.setView(view);
         toast.show();
     }
+
+
+    public void createServices(View v){
+
+        GetBiersServices.startActionGetAllBiers(this);
+        IntentFilter intentFilter = new IntentFilter(BIERS_UPDATE);
+        LocalBroadcastManager.getInstance(this).registerReceiver(new BierUpdate(),intentFilter);
+    }
+    public static final String BIERS_UPDATE="com.project-tp1.info3044-11.BIERS_UPDATE";
+    public static final String TAG="BIERS_UPDATE";
+
+    public void createCredits(MenuItem item) {
+        Intent i = new Intent(this, Credits.class);
+        startActivity(i);
+    }
+
 
     public class BierUpdate extends BroadcastReceiver{
 

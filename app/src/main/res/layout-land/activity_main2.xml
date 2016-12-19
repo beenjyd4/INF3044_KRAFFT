@@ -22,52 +22,45 @@
         android:layout_alignParentStart="true"
         android:gravity="center"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@id/textView2"
         android:layout_marginTop="15dp">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <Button
+            android:text="@string/btn_openbrow"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/button4"
+            android:onClick="findMoreBeer"
+            android:textColor="#FF334D5C"
+            android:layout_below="@id/button2"/>
 
-            <Button
-                android:text="@string/services"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button2"
-                android:gravity="center"
-                android:onClick="createServices"
-                android:textColor="#FF334D5C"/>
-
-            <Button
-                android:text="@string/btn_openbrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button4"
-                android:onClick="findMoreBeer"
-                android:textColor="#FF334D5C"/>
-        </LinearLayout>
+        <Button
+            android:text="@string/services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/button2"
+            android:gravity="center"
+            android:onClick="createServices"
+            android:textColor="#FF334D5C"/>
 
         <android.support.v7.widget.RecyclerView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="5dp"
             android:id="@+id/rv_beer"
             android:layout_alignParentBottom="true"
-            android:layout_weight="1" >
+            android:layout_toEndOf="@id/button4"
+            android:layout_toRightOf="@id/button4">
 
         </android.support.v7.widget.RecyclerView>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 </RelativeLayout>
